@@ -17,3 +17,10 @@ python 2.7 and NLTK
 
 `>>> nltk.download('averaged_perceptron_tagger')`
 
+
+## Rule Generation:
+ 
+`python ap-tagging-rule-gen.py <#rules> <corpus = 'brown' or 'treebank'>`
+
+
+
