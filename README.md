@@ -3,8 +3,7 @@ Rule-based part-of-speech tagging with different baseline taggers and different 
 
 
 ## Required Packages:
-python 2.7
-NLTK 
+python 2.7 and NLTK 
 
 `python`
 
