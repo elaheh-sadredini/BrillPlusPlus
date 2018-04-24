@@ -1,7 +1,6 @@
 # A Brill Tagging Rule Generator
 # Deyuan Guo and Elaheh Sadredini. CS@UVa. May 2016
 
-
 import sys
 import time
 import nltk
@@ -219,6 +218,11 @@ def rule_to_regex(rule, range_l, range_r):
         i += 1
 
     regex += ' /' # reporting
+    regex = regex.replace('+*', '+')
+    regex = regex.replace('$', '')
+    regex = regex.replace('+(*', '+(')
+    regex = regex.replace('(', '')
+    regex = regex.replace(')', '')
 
     return regex, report_tag
 
@@ -350,8 +354,10 @@ def gen_tagging_rules(nrule, my_corpus):
             #out2.write(report_tag + " : " + regex + "\n")
             out2.write(regex + "\n")
 
+        print "\nDone."
+        print "\n*************************************"
         print "The regexes are written to", regex_file
-        print "Done."
+        print "*************************************"
         out1.close()
         out2.close()
 
@@ -380,7 +386,7 @@ if __name__ == "__main__":
         print help_msg
         sys.exit(0)
 
-    print "\nGenerating", num_rules, "tagging rules based on fnTBL 37 rule templates and the Brown corpus."
+    print "\nGenerating", num_rules, "tagging rules based on fnTBL 37 rule templates."
 
     gen_tagging_rules(num_rules, my_corpus)
 
