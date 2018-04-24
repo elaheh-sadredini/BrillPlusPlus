@@ -26,3 +26,11 @@ The generated rules, which are converted to regular expressions, are witten in "
 
 The input to the automata is written in "input.txt".
 
+
+## Rule to MNRL format:
+
+To convert the rules to MNRL format, use [hscompile](https://github.com/kevinaangstadt/hscompile) with the following commad:
+ 
+`pcre2mnrl regext.txt regex.mnrl`
+
+
