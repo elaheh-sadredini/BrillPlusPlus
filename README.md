@@ -23,4 +23,5 @@ python 2.7 and NLTK
 `python ap-tagging-rule-gen.py <#rules> <corpus = 'brown' or 'treebank'>`
 
 The generated rules, which are converted to regular expressions, are witten in "regex.txt" file. 
+The input to the automata is written in "input.txt".
 
